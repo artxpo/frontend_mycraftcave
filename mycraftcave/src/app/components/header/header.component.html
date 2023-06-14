@@ -1,0 +1,38 @@
+<nav
+  style="height: 60px"
+  class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+  id="mainNav"
+>
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">MyCraft Cave</a>
+
+    <div class=" navbar" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-0 mx-lg-1" *ngIf="!isAuthenticated">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded" style="cursor: pointer;" (click)="loginWithGoogle()"
+            >Login</a
+          >
+        </li>
+        <button *ngIf="isAuthenticated" style="color: #fff;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+         <button routerLink="/account-settings" mat-menu-item>
+            <mat-icon>home</mat-icon>
+            <span>Account Settings</span>
+          </button>
+
+           <button [routerLink]="['/',profile.userName]" mat-menu-item>
+            <mat-icon>account_circle</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button (click)="logout()" mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+
+        </mat-menu>
+      </ul>
+    </div>
+  </div>
+</nav>

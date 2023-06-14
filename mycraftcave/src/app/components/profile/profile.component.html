@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="header">
+    <img
+      src="assets/img/avataaars.svg"
+      style="width: 150px; height: 150px; margin-right: 20px"
+    />
+    <div>
+      <div style="display: flex; margin-bottom: 20px;align-items: baseline;">
+        <h3 style="margin-right: 15px">{{profileDetail?.name}}</h3>
+        <button
+        *ngIf="isAuthenticated"
+        routerLink="/account-settings"
+          class="btn btn-primary edit-profile"
+      >
+        <mat-icon
+    >edit</mat-icon>
+          Edit Profile
+        </button>
+      </div>
+      Download free, beautiful high-quality photos curated by {{profileDetail?.name}}.
+    </div>
+  </div>
+</div>
+<mat-tab-group>
+  <mat-tab label="Photos"> Content 1 </mat-tab>
+  <mat-tab label="Likes"> Content 2 </mat-tab>
+  <mat-tab label="Collections"> Content 3 </mat-tab>
+  <mat-tab label="Stats"> Content 3 </mat-tab>
+</mat-tab-group>
+

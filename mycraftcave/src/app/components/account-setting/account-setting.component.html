@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center"  style="height:400px">
+  <mat-card class="mat-elevation-z8" fxFlex="25%" style="
+  padding: 19px;
+  margin-top: 120px;
+">
+    <div>
+    <mat-card-title>
+      <h2>Account Settings</h2>
+    </mat-card-title>
+  </div>
+    <mat-form-field appearance="outline">
+      <mat-label>UserName</mat-label>
+      <input readonly [(ngModel)]="profileDetail.name" matInput />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input readonly [(ngModel)]="profileDetail.email" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>UserName</mat-label>
+      <input readonly [(ngModel)]="profileDetail.user_name" matInput />
+    </mat-form-field>
+  </mat-card>
+</div>

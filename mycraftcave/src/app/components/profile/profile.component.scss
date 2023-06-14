@@ -1,0 +1,21 @@
+.container{
+  margin: 155px 100px;
+  display: flex;
+  justify-content: center;
+  .header{
+    display: flex;
+    align-items: center;
+  }
+  .edit-profile{
+    background: #fff;
+    color: #000;
+    border-color: #eee;
+    padding: 3px 10px;
+    background: #fff; color: #000; border-color: #eee;
+    mat-icon{
+      font-size: 14px;
+      position: relative;
+      top: 11px
+    }
+  }
+}
